@@ -226,7 +226,7 @@ Canvas:
   m_GameObject: {fileID: 77133104}
   m_Enabled: 1
   serializedVersion: 3
-  m_RenderMode: 1
+  m_RenderMode: 0
   m_Camera: {fileID: 519420031}
   m_PlaneDistance: 100
   m_PixelPerfect: 0
@@ -491,17 +491,17 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4c2c3b25e80957744824e846b9fb3bc9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  aceleracao: 6
-  velocidadeMaxima: 8
-  frenagem: 5
+  aceleracao: 8
+  velocidadeMaxima: 6
+  frenagem: 4
   velocidadeRotacao: 720
   cameraDoJogo: {fileID: 519420031}
   laser: {fileID: 1146017887945512722, guid: 3fce5ea99f057f8418a2c08fe6193fd4, type: 3}
   disparo: {fileID: 1121615253}
-  somLaser: {fileID: 123162928}
+  somLaser: {fileID: 0}
   disparosMaximos: 5
   tempoRecarga: 1.5
-  fonteDeImpacto: {fileID: 123162929}
+  fonteDeImpacto: {fileID: 0}
 --- !u!82 &123162928
 AudioSource:
   m_ObjectHideFlags: 0
@@ -612,8 +612,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Unity.Cinemachine::Unity.Cinemachine.CinemachineImpulseSource
   ImpulseDefinition:
-    ImpulseChannel: -1
-    ImpulseShape: 2
+    ImpulseChannel: 1
+    ImpulseShape: 0
     CustomImpulseShape:
       serializedVersion: 2
       m_Curve: []
@@ -621,8 +621,8 @@ MonoBehaviour:
       m_PostInfinity: 2
       m_RotationOrder: 4
     ImpulseDuration: 0.2
-    ImpulseType: 0
-    DissipationRate: 0.25
+    ImpulseType: 3
+    DissipationRate: 0
     RawSignal: {fileID: 0}
     AmplitudeGain: 1
     FrequencyGain: 1
@@ -936,11 +936,11 @@ Camera:
     y: 0
     width: 1
     height: 1
-  near clip plane: 0.3
-  far clip plane: 1000
-  field of view: 60
+  near clip plane: 0.1
+  far clip plane: 5000
+  field of view: 40
   orthographic: 1
-  orthographic size: 5.22
+  orthographic size: 6
   m_Depth: -1
   m_CullingMask:
     serializedVersion: 2
@@ -1091,7 +1091,7 @@ Transform:
   m_GameObject: {fileID: 814194726}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 9.04, y: 6.41, z: 0}
+  m_LocalPosition: {x: 10.5, y: 6.41, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -1131,7 +1131,7 @@ BoxCollider2D:
   m_UsedByEffector: 0
   m_CompositeOperation: 0
   m_CompositeOrder: 0
-  m_Offset: {x: 0.0481534, y: -0.14987898}
+  m_Offset: {x: 0.0481534, y: -0.101233244}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0, y: 0}
@@ -1141,7 +1141,7 @@ BoxCollider2D:
     drawMode: 0
     adaptiveTiling: 0
   m_AutoTiling: 0
-  m_Size: {x: 0.15, y: 10.092664}
+  m_Size: {x: 0.15, y: 11.941198}
   m_EdgeRadius: 0
 --- !u!1 &1014989096
 GameObject:
@@ -1262,7 +1262,7 @@ Transform:
   m_GameObject: {fileID: 1212219132}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 11.59, z: 0}
+  m_LocalPosition: {x: 0, y: 12.71, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -1302,7 +1302,7 @@ BoxCollider2D:
   m_UsedByEffector: 0
   m_CompositeOperation: 0
   m_CompositeOrder: 0
-  m_Offset: {x: 0.040798187, y: -0.22438955}
+  m_Offset: {x: -0.3970127, y: -0.22438955}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0, y: 0}
@@ -1312,7 +1312,7 @@ BoxCollider2D:
     drawMode: 0
     adaptiveTiling: 0
   m_AutoTiling: 0
-  m_Size: {x: 17.972015, y: 0.15}
+  m_Size: {x: 21.182629, y: 0.14999998}
   m_EdgeRadius: 0
 --- !u!1 &1268989021
 GameObject:
@@ -1455,10 +1455,10 @@ MonoBehaviour:
     LookAtTarget: {fileID: 0}
     CustomLookAtTarget: 0
   Lens:
-    FieldOfView: 60
-    OrthographicSize: 5.22
-    NearClipPlane: 0.3
-    FarClipPlane: 1000
+    FieldOfView: 40
+    OrthographicSize: 6
+    NearClipPlane: 0.1
+    FarClipPlane: 5000
     Dutch: 0
     ModeOverride: 0
     PhysicalProperties:
@@ -1501,15 +1501,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0c11265b855408d42af33d62691f5194, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Unity.Cinemachine::Unity.Cinemachine.CinemachineExternalImpulseListener
-  ChannelMask: 1
-  Gain: 2.17
+  ChannelMask: 0
+  Gain: 0
   Use2DDistance: 0
-  UseLocalSpace: 1
+  UseLocalSpace: 0
   ReactionSettings:
     m_SecondaryNoise: {fileID: 0}
-    AmplitudeGain: 1
-    FrequencyGain: 1
-    Duration: 1
+    AmplitudeGain: 0
+    FrequencyGain: 0
+    Duration: 0
     m_NoiseOffsets: {x: 0, y: 0, z: 0}
 --- !u!1 &1676777638
 GameObject:
@@ -1537,7 +1537,7 @@ Transform:
   m_GameObject: {fileID: 1676777638}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -8.94, y: 6.01, z: 0}
+  m_LocalPosition: {x: -11.08, y: 6.01, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -1577,7 +1577,7 @@ BoxCollider2D:
   m_UsedByEffector: 0
   m_CompositeOperation: 0
   m_CompositeOrder: 0
-  m_Offset: {x: -0.12389183, y: 0.15486479}
+  m_Offset: {x: -0.12389183, y: 0.27647853}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0, y: 0}
@@ -1587,7 +1587,7 @@ BoxCollider2D:
     drawMode: 0
     adaptiveTiling: 0
   m_AutoTiling: 0
-  m_Size: {x: 0.15, y: 10.147363}
+  m_Size: {x: 0.15, y: 12.044544}
   m_EdgeRadius: 0
 --- !u!1 &1696840240
 GameObject:
@@ -1615,7 +1615,7 @@ Transform:
   m_GameObject: {fileID: 1696840240}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0.97, z: 0}
+  m_LocalPosition: {x: 0, y: 0.02, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -1655,7 +1655,7 @@ BoxCollider2D:
   m_UsedByEffector: 0
   m_CompositeOperation: 0
   m_CompositeOrder: 0
-  m_Offset: {x: 0.013879776, y: 0.013880253}
+  m_Offset: {x: -0.5090599, y: 0.013880253}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0, y: 0}
@@ -1665,7 +1665,7 @@ BoxCollider2D:
     drawMode: 0
     adaptiveTiling: 0
   m_AutoTiling: 0
-  m_Size: {x: 18.183624, y: 0.15}
+  m_Size: {x: 21.856373, y: 0.15}
   m_EdgeRadius: 0
 --- !u!1 &1826539829
 GameObject:
