@@ -18,7 +18,7 @@ public class Asteroid : MonoBehaviour
     void Start()
     {
         rig=GetComponent<Rigidbody2D>();
-        acharPlayer=FindAnyObjectByType<Player>().transform;
+        acharPlayer=FindAnyObjectByType<MoverNave>().transform;
         velocAtual=Random.Range(velocMin,velocMax);
         //chamar uma função para achar o gameController quando o Prefab for criado
         controller=FindAnyObjectByType<GameController>();
